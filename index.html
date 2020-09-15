@@ -3,21 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pomodoro</title>
-
     <link rel="stylesheet" href="style.css" />
+
+    <title>Pomodoro</title>
   </head>
   <body>
-    <input type="radio" name="mode" id="pomodoro" checked onchange="selectedMode()"/>
-    <label for="pomodoro">Pomodoro</label>
-    <input type="radio" name="mode" id="shortBreak" onchange="selectedMode()"/>
-    <label for="shortBreak">Short Break</label>
-    <input type="radio" name="mode" id="longBreak" onchange="selectedMode()"/>
-    <label for="longBreak">Long Break</label>
-    <h3 id="timer"></h3>
-    <button onclick="showTimerValue()">Start</button>
-    <button id="stopBtn">Stop</button>
-    <button>Reset</button>
+    <div class="container"></div>
+
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
