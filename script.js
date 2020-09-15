@@ -17,11 +17,14 @@ ws.innerText = seconds;
 bm.innerText = breakTime;
 bs.innerText = seconds;
 
+document.title = `(${workTime}:${seconds}) Pomodoro`
+
+
 let startTimer;
 
 start.addEventListener("click", function () {
   if (startTimer === undefined) {
-    startTimer = setInterval(timer, 1);
+    startTimer = setInterval(timer, 1000);
   } else {
     alert("O tempo já iniciou!");
   }
@@ -47,6 +50,7 @@ let count = 0;
 
 function timer() {
   if (ws.innerText != 0) {
+    document.title = `(${wm.innerText}:${ws.innerText}) Pomodoro`
     ws.innerText--;
   } else if (wm.innerText != 0 && ws.innerText == 0) {
     ws.innerText = 59;
@@ -62,6 +66,8 @@ function timer() {
     } else if (bm.innerText != 0 && bs.innerText == 0) {
       bs.innerText = 59;
       bm.innerText--;
+      document.title = `(${bm.innerText}:${bs.innerText}) Pomodoro`
+
     } else {
       wm.innerText = workTime;
       ws.innerText = seconds;
