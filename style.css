@@ -28,6 +28,8 @@ div {
 div.pomodoro-progress {
   display: flex;
   justify-content: center;
+  visibility: hidden;
+
 }
 
 div.progress-work,
@@ -39,17 +41,17 @@ div.progress-finish {
 }
 
 div.progress-work {
-  width: 30px;
+  width: 25px;
   background-color: #71d5e4;
 }
 
 div.progress-break {
-  width: 8px;
+  width: 5px;
   background-color: #d9ced6;
 }
 
 div.progress-finish {
-  width: 15px;
+  width: 10px;
   background-color: #d9ced6;
 }
 
