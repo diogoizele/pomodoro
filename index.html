@@ -5,10 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
 
-    <title>Pomodoro</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>(25:00) Pomodoro</title>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <div class="pomodoro-progress">
+        <div class="progress-work"></div>
+        <div class="progress-break"></div>
+        <div class="progress-work"></div>
+        <div class="progress-break"></div>
+        <div class="progress-work"></div>
+        <div class="progress-break"></div>
+        <div class="progress-work"></div>
+        <div class="progress-finish"></div>
+      </div>
+
+      <div class="pomodoro-timer">
+        <div class="timer" id="work-timer">
+          <div class="time">
+            <p id="wm-timer">25</p>
+            <p id="semicolon">:</p>
+            <p id="ws-timer">00</p>
+          </div>
+          <p class="message-status">Work!</p>
+        </div>
+        <div class="timer" id="break-timer">
+          <div class="time">
+            <p id="bm-timer">5</p>
+            <p id="semicolon">:</p>
+            <p id="bs-timer">00</p>
+          </div>
+          <p class="message-status">Break!</p>
+        </div>
+      </div>
+
+      <div class="buttons-painel">
+        <button class="btn" id="start">Start</button>
+        <button class="btn" id="stop">Pause</button>
+        <button class="btn" id="reset">Reset</button>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
