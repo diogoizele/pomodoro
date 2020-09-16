@@ -17,14 +17,11 @@ ws.innerText = seconds;
 bm.innerText = breakTime;
 bs.innerText = seconds;
 
-document.title = `(${workTime}:${seconds}) Pomodoro`
-
-
 let startTimer;
 
 start.addEventListener("click", function () {
   if (startTimer === undefined) {
-    startTimer = setInterval(timer, 1000);
+    startTimer = setInterval(timer, 1);
   } else {
     alert("O tempo já iniciou!");
   }
@@ -50,7 +47,7 @@ let count = 0;
 
 function timer() {
   if (ws.innerText != 0) {
-    document.title = `(${wm.innerText}:${ws.innerText}) Pomodoro`
+    document.title = `(${wm.innerText}:${ws.innerText}) Pomodoro`;
     ws.innerText--;
   } else if (wm.innerText != 0 && ws.innerText == 0) {
     ws.innerText = 59;
@@ -66,8 +63,7 @@ function timer() {
     } else if (bm.innerText != 0 && bs.innerText == 0) {
       bs.innerText = 59;
       bm.innerText--;
-      document.title = `(${bm.innerText}:${bs.innerText}) Pomodoro`
-
+      document.title = `(${bm.innerText}:${bs.innerText}) Pomodoro`;
     } else {
       wm.innerText = workTime;
       ws.innerText = seconds;
@@ -89,20 +85,20 @@ function timer() {
 
   switch (count) {
     case 1:
-      document.querySelector("[prog1]").style.visibility = "visible";
-      document.querySelector("[prog2]").style.visibility = "visible";
+      document.querySelector("[prog1]").style.backgroundColor = "#71d5e4";
+      document.querySelector("[prog2]").style.backgroundColor = "#d9ced6";
       break;
     case 2:
-      document.querySelector("[prog3]").style.visibility = "visible";
-      document.querySelector("[prog4]").style.visibility = "visible";
+      document.querySelector("[prog3]").style.backgroundColor = "#71d5e4";
+      document.querySelector("[prog4]").style.backgroundColor = "#d9ced6";
       break;
     case 3:
-      document.querySelector("[prog5]").style.visibility = "visible";
-      document.querySelector("[prog6]").style.visibility = "visible";
+      document.querySelector("[prog5]").style.backgroundColor = "#71d5e4";
+      document.querySelector("[prog6]").style.backgroundColor = "#d9ced6";
       break;
     case 4:
-      document.querySelector("[prog7]").style.visibility = "visible";
-      document.querySelector("[prog8]").style.visibility = "visible";
+      document.querySelector("[prog7]").style.backgroundColor = "#71d5e4";
+      document.querySelector("[prog8]").style.backgroundColor = "#d9ced6";
       count = 0;
       clearInterval(startTimer);
       break;
