@@ -12,6 +12,9 @@ const ws = document.getElementById("ws-timer");
 const bm = document.getElementById("bm-timer");
 const bs = document.getElementById("bs-timer");
 
+const workMsg = document.getElementById("msg-work");
+const breakMsg = document.getElementById("msg-break");
+
 wm.innerText = workTime;
 ws.innerText = seconds;
 bm.innerText = breakTime;
@@ -20,7 +23,7 @@ bs.innerText = seconds;
 let startTimer;
 
 start.addEventListener("click", function () {
-  if (startTimer === undefined) {
+  if (startTimer == undefined) {
     startTimer = setInterval(timer, 1000);
   } else {
     alert("O tempo já iniciou!");
@@ -29,7 +32,7 @@ start.addEventListener("click", function () {
 
 stop.addEventListener("click", function () {
   clearInterval(startTimer);
-  startTimer = undefined;
+  startTimer = null;
 });
 
 reset.addEventListener("click", function () {
@@ -40,7 +43,6 @@ reset.addEventListener("click", function () {
     bm.innerText = breakTime;
     bs.innerText = seconds;
   }
-  startTimer = undefined;
 });
 
 let count = 0;
@@ -104,3 +106,29 @@ function timer() {
       break;
   }
 }
+
+function createRandomPhrase() {
+  const getRandomNumber = (min, max) =>
+    Math.floor(Math.random() * (max - min) + min);
+
+  switch (getRandomNumber(1, 5)) {
+    case 1:
+      workMsg.innerText = "Let's Code! :)";
+      breakMsg.innerText = "Have a Break! =]";
+      break;
+    case 2:
+      workMsg.innerText = "Let's Study ;)";
+      breakMsg.innerText = "Rest a Little :D";
+      break;
+    case 3:
+      workMsg.innerText = "Coding Time! =)";
+      breakMsg.innerText = "Take a Relax! =P";
+      break;
+    case 4:
+      workMsg.innerText = "Do You Work! :)";
+      breakMsg.innerText = "Take Your Break B)";
+      break;
+  }
+}
+createRandomPhrase()
+
