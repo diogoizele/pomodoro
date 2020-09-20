@@ -125,7 +125,7 @@ function createRandomPhrase() {
       breakMsg.innerText = "Take a Relax! =P";
       break;
     case 4:
-      workMsg.innerText = "Do You Work! :)";
+      workMsg.innerText = "Do Your Work! :)";
       breakMsg.innerText = "Take Your Break B)";
       break;
   }
